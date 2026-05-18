@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class FeeManager {
+
+    private ArrayList<Student> studentList;
+
+    public FeeManager() {
+        studentList = new ArrayList<>();
+    }
+
+    public void addStudent(Student s) {
+        studentList.add(s);
+    }
+
+    public ArrayList<Student> getAllStudents() {
+        return studentList;
+    }
+    public Student getStudent(int index) {
+        return studentList.get(index);
+    }
+}
