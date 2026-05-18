@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class Student {
+
+    private ArrayList<String> names;
+    private ArrayList<Double> payments;
+
+    public Student() {
+        names    = new ArrayList<>();
+        payments = new ArrayList<>();
+    }
+
+    public void addName(String name) {
+        if (names.size() < 50) {
+            names.add(name);
+        }
+    }
+
+    public void addPayment(double amount) {
+        payments.add(amount);
+    }
+
+    public double getTotal() {
+        double total = 0;
+        for (double p : payments) {
+            total = total + p;
+        }
+        return total;
+    }
+
+    public String getNamesAsString() {
+        return String.join(" & ", names);
+    }
+
+}
